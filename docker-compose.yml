@@ -1,18 +1,17 @@
-version: '3.8'
+version: '3.1'
 
 services:
 
-  dev-db:
-    image: postgres
+  db:
+    image: 'postgres'
     restart: always
     ports:
-      - 5432:5432
-    environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: 0000
-      POSTGRES_DB: nest-api-bookmark
+      - '5432:5432'
     volumes:
       - postgres:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
 
 volumes:
   postgres:
