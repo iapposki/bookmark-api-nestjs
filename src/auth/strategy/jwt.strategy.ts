@@ -14,6 +14,9 @@ export class JwtStrategy extends PassportStrategy(Strategy, 'jwt'){
     }
 
     validate(payload: any){
+
+        // validate the details here, payload comes from the extracted json from the jwt token from header. 
+
         return payload
     }
 }
