@@ -65,7 +65,7 @@ export class AuthService{
             throw new ForbiddenException('Credentials incorrect')
         }
 
-        // return user.
+        // returns token.
         return this.signToken(user.id, user.email)
 
     }
