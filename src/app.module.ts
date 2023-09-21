@@ -8,6 +8,5 @@ import { PrismaModule } from './prisma/prisma.module';
 
 @Module({
   imports: [AuthModule, UserModule, BookmarkModule, PrismaModule, ConfigModule.forRoot({isGlobal: true})],
-  controllers: [],
 })
 export class AppModule {}
